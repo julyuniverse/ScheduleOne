@@ -12,6 +12,18 @@ ScheduleOne
 http://3.34.44.32/
 
 *******************
+사용된 기술 및 API
+*******************
+
+AWS->EC2->Ubuntu18
+Apache
+HTML5 CSS3 ES6 PHP7 MySQL5 Codeigniter3
+Bootstrap v5
+Fullcalendar v5
+TOAST UI: color-picker
+NAVER: billboard.js v3
+
+*******************
 Update Log
 *******************
 
