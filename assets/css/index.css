@@ -1,0 +1,96 @@
+/* 991px 이하 일 때 */
+@media screen and (max-width: 991px) {
+	.main_banner {
+		margin-top: 120px;
+		margin-bottom: 120px;
+	}
+
+	.calendar {
+		margin-top: 70px;
+		margin-bottom: 70px;
+	}
+
+	.fc .fc-button {
+		padding: 0.1em 0.3em;
+	}
+
+	.fc .fc-toolbar-title {
+		font-size: 1em;
+	}
+
+	.fc-daygrid-event {
+		font-size: 0.7em;
+	}
+
+	#chart {
+		margin: 0;
+	}
+}
+
+/* 992px 이상 일 때 */
+@media screen and (min-width: 992px) {
+	.calendar {
+		margin-top: 90px;
+		margin-bottom: 90px;
+	}
+
+	.fc .fc-daygrid-day-frame {
+		padding: 16px 0;
+	}
+
+	#chart {
+		height: 600px;
+		margin: auto;
+	}
+}
+
+/* 1200px 이상 일 때 */
+@media screen and (min-width: 1200px) {
+	.fc .fc-daygrid-day-frame {
+		padding: 24px 0;
+	}
+
+	#chart {
+		height: 700px;
+		margin: auto;
+	}
+}
+
+/* 1400px 이상 일 때 */
+@media screen and (min-width: 1400px) {
+	.fc .fc-daygrid-day-frame {
+		padding: 36px 0;
+	}
+
+	#chart {
+		height: 800px;
+		margin: auto;
+	}
+}
+
+/* fullcalendar */
+.fc-toolbar-chunk {
+	display: flex;
+	align-items: center;
+}
+
+.fc .fc-col-header-cell-cushion {
+	color: #000000;
+    text-decoration: none;
+}
+
+.fc .fc-daygrid-day-number {
+	color: #000000;
+    text-decoration: none;
+}
+
+.fc .fc-daygrid-event-harness {
+	cursor: pointer;
+}
+
+/* toast ui color-picker */
+.tui-colorpicker-palette-hex {
+	font-size: 0.8em;
+}
+
+/* billboardjs */
