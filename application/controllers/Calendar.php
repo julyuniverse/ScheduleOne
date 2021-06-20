@@ -12,7 +12,7 @@ class Calendar extends CI_Controller {
 	public function index() {
 		$data = array();
 		
-		$data['title'] = "내 달력";
+		$data['title'] = "SO | 내 달력";
 
 		$this->load->view('include/header', $data);
 		$this->load->view('calendar/index');

@@ -11,7 +11,7 @@ class Main extends CI_Controller {
 	public function index()	{
 		$data = array();
 		
-		$data['title'] = "Main";
+		$data['title'] = "SO | 일정과 지출을 관리해 보세요";
 
 		$this->load->view('include/header', $data);
 		$this->load->view('main/index');

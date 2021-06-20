@@ -1,10 +1,8 @@
 <?php
 #print_r($expenditure_type);
 ?>
-
-
 <div class="container-fluid my_expenditure">
-	
+
 	<!-- 달력 -->
 	<div class="row justify-content-center calendar">
     <div class="col col-lg-8">
@@ -344,8 +342,7 @@ calendarEventButtons.forEach((e) => {
 						let span1 = document.createElement('span');
 						let span2 = document.createElement('span');
 						span1.innerText = dataArray[0][i]['name']+": ";
-						span2.innerText = dataArray[0][i]['amount'].toString()
-  .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")+"원";
+						span2.innerText = new Intl.NumberFormat().format(dataArray[0][i]['amount'])+"원";
 						h6.append(span1);
 						h6.append(span2);
 						div.append(h6);
@@ -361,8 +358,7 @@ calendarEventButtons.forEach((e) => {
 						let span1 = document.createElement('span');
 						let span2 = document.createElement('span');
 						span1.innerText = dataArray[1][i]['name']+": ";
-						span2.innerText = dataArray[1][i]['amount'].toString()
-  .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")+"원";
+						span2.innerText = new Intl.NumberFormat().format(dataArray[1][i]['amount'])+"원";
 						h6.append(span1);
 						h6.append(span2);
 						div2.append(h6);
@@ -377,7 +373,6 @@ calendarEventButtons.forEach((e) => {
 })
 
 // 지출 data
-/*
 if(mIdx !== "") {
 	fetch('/expenditure/get_chart_expenditure', {
 		method: 'post',
@@ -446,8 +441,7 @@ if(mIdx !== "") {
 				let span1 = document.createElement('span');
 				let span2 = document.createElement('span');
 				span1.innerText = dataArray[0][i]['name']+": ";
-				span2.innerText = dataArray[0][i]['amount'].toString()
-  .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")+"원";
+				span2.innerText = new Intl.NumberFormat().format(dataArray[0][i]['amount'])+"원";
 				h6.append(span1);
 				h6.append(span2);
 				div.append(h6);
@@ -463,8 +457,7 @@ if(mIdx !== "") {
 				let span1 = document.createElement('span');
 				let span2 = document.createElement('span');
 				span1.innerText = dataArray[1][i]['name']+": ";
-				span2.innerText = dataArray[1][i]['amount'].toString()
-  .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")+"원";
+				span2.innerText = new Intl.NumberFormat().format(dataArray[1][i]['amount'])+"원";
 				h6.append(span1);
 				h6.append(span2);
 				div2.append(h6);
@@ -491,7 +484,6 @@ if(mIdx !== "") {
 		bindto: "#chart"
 	})
 }
-*/
 
 // bootstrap5
 const myModal = new bootstrap.Modal(document.getElementById('expenditure_modal'), {

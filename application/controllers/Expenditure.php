@@ -13,7 +13,7 @@ class Expenditure extends CI_Controller {
 		$expenditure_type = $this->expenditure_model->expenditure_type();
 
 		$data = array();
-		$data['title'] = "내 지출";
+		$data['title'] = "SO | 내 지출";
 		$data['expenditure_type'] = $expenditure_type;
 
 		$this->load->view('include/header', $data);
