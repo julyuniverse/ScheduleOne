@@ -22,6 +22,10 @@
 		font-size: 0.7em;
 	}
 
+	.fc-col-header-cell-cushion {
+		font-size: 0.7em;
+	}
+
 	#chart {
 		margin: 0;
 	}

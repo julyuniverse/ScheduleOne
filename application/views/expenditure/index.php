@@ -199,6 +199,7 @@ const mIdx = document.getElementById('m_idx').value;
 // fullCalendar
 const calendarEl = document.getElementById('calendar');
 const calendar = new FullCalendar.Calendar(calendarEl, {
+	locale: 'ko',
 	initialView: 'dayGridMonth',
 	headerToolbar: {
 		start: "addEventButton",
@@ -210,10 +211,6 @@ const calendar = new FullCalendar.Calendar(calendarEl, {
 	},
 	fixedWeekCount: false,
 	showNonCurrentDates: false,
-	dayHeaderContent: function (date) {
-		let weekList = ["일", "월", "화", "수", "목", "금", "토"];
-		return weekList[date.dow];
-	},
 	events: {
 		url: "expenditure/get_expenditure",
 		method: "GET",

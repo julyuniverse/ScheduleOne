@@ -165,21 +165,19 @@ colorpicker2.on('selectColor', function(ev) {
 // fullCalendar
 const calendarEl = document.getElementById('calendar');
 const calendar = new FullCalendar.Calendar(calendarEl, {
+	locale: 'ko',
 	initialView: 'dayGridMonth',
 	headerToolbar: {
 		start: "addEventButton",
 		center: "prev title next",
 		end: "today",
 	},
-	titleFormat: function(date) {
-		return `${date.date.year}년 ${date.date.month + 1}월`;
+	footerToolbar: {
+		left: 'dayGridMonth,timeGridWeek,timeGridDay',
+		right: 'listMonth'
 	},
 	fixedWeekCount: false,
 	showNonCurrentDates: false,
-	dayHeaderContent: function (date) {
-		let weekList = ["일", "월", "화", "수", "목", "금", "토"];
-		return weekList[date.dow];
-	},
 	events: {
 		url: "calendar/get_events",
 		method: "GET",
@@ -187,10 +185,10 @@ const calendar = new FullCalendar.Calendar(calendarEl, {
 			alert("there was an error while fetching events!");
 		}
 	},
-	// 일정 추가 버튼
+	// 추가 버튼
 	customButtons: {
 		addEventButton: {
-			text: '일정 추가',
+			text: '추가',
 			click: function() {
 				myModal.show();
 			}
