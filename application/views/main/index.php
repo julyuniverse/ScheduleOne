@@ -8,10 +8,10 @@
 	<div class="row justify-content-center">
     <div class="col col-lg-8 px-5" style="display: flex; flex-direction: row-reverse;">
       <div class="ms-1">
-				오늘 방문수: <?=$today?>
+				누적 방문수: <?=$total?>
 			</div>
 			<div>
-				누적 방문수: <?=$total?>
+				오늘 방문수: <?=$today?>
 			</div>
     </div>
   </div>
