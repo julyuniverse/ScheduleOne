@@ -32,4 +32,36 @@ class Main_model extends CI_Model {
 		setcookie("m_idx", "", 0, "/");
 		return "success";
 	}
+
+	// get_count_visit
+	public function get_count_visit() {
+		$data = array();
+		// 오늘 날짜의 data가 있는지 확인한다.
+		$result = $this->db->query("select count(*) cnt from visit where date = '".date("Y-m-d")."'")->result_array();
+		if($result[0]['cnt'] < 1) {
+			$tmpData = array(
+				'date' => date("Y-m-d"),
+				'count' => 1
+			);
+
+			$this->db->insert('visit', $tmpData);
+
+			$result2 = $this->db->query("select sum(count) total from visit")->result_array();
+			$data['total'] = $result2[0]['total'];
+			$data['today'] = 1;
+
+			return $data;
+			exit;
+		}else{
+			$this->db->query("update visit set count = count+1 where date = '".date("Y-m-d")."'");
+
+			$result2 = $this->db->query("select sum(count) total from visit")->result_array();
+			$data['total'] = $result2[0]['total'];
+			$result3 = $this->db->query("select count from visit where date = '".date("Y-m-d")."'")->result_array();
+			$data['today'] = $result3[0]['count'];
+
+			return $data;
+			exit;
+		}
+	}
 }

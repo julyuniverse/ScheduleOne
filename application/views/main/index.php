@@ -4,4 +4,15 @@
       <img src="<?=base_url('assets/img/main/main.jpg')?>" class="img-fluid">
     </div>
   </div>
+
+	<div class="row justify-content-center">
+    <div class="col col-lg-8 px-5" style="display: flex; flex-direction: row-reverse;">
+      <div class="ms-1">
+				오늘 방문수: <?=$today?>
+			</div>
+			<div>
+				누적 방문수: <?=$total?>
+			</div>
+    </div>
+  </div>
 </div>

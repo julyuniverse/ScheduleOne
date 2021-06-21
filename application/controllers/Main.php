@@ -11,8 +11,13 @@ class Main extends CI_Controller {
 	public function index()	{
 		$data = array();
 		
+		// 방문자 카운트
+		$result = $this->main_model->get_count_visit();
+		$data['total'] = $result['total'];
+		$data['today'] = $result['today'];
+		
 		$data['title'] = "SO | 일정과 지출을 관리해 보세요";
-
+		
 		$this->load->view('include/header', $data);
 		$this->load->view('main/index');
 		$this->load->view('include/footer');
